@@ -31,7 +31,7 @@ app.get('/api/todos', (request, response) => {
 
 app.post('/api/todos',  (request, response) => {
     const { item } = request.body
-    todos.push({id: todos.length, item:item, complete: false})
+    todos.push({id: todos.length+1, item:item, complete: false})
     response.json({ id:todos.length })
 })
 
